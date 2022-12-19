@@ -1,0 +1,352 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+  
+*/
+:root {
+  font-size: 62.5%;
+  --raleway-font: "Raleway", sans-serif;
+  --open-sans-font: "Open Sans", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+  --primary-color-1: hsl(243, 87%, 12%);
+  --primary-color-2: hsl(238, 22%, 44%);
+  --accent-color-1: hsl(224, 93%, 58%);
+  --accent-color-2: hsl(170, 45%, 43%);
+  --neutral-color-1: hsl(240, 75%, 98%);
+  --neutral-color-2: hsl(0, 0%, 75%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+li {
+  list-style-type: none;
+}
+/* Header Section */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3rem;
+  margin-bottom: 8rem;
+}
+
+.navigation__logo {
+  width: 7rem;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+}
+.navigation ul li:not(:last-child) {
+  margin-right: 2.2rem;
+}
+.navigation__link {
+  text-decoration: none;
+  color: var(--primary-color-1);
+  font-size: 1.3rem;
+  font-family: var(--raleway-font);
+}
+
+.illustration__1 {
+  margin-bottom: 2rem;
+}
+
+/* CALL TO ACTION SECTION */
+
+.cta {
+  padding: 2.5rem;
+  text-align: center;
+  font-family: var(--open-sans-font);
+  font-family: var(--raleway-font);
+  font-weight: var(--fw-700);
+}
+.cta__heading {
+  color: var(--primary-color-1);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.cta__description {
+  font-size: 1.6rem;
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  color: #222;
+}
+::placeholder {
+  color: var(--neutral-color-2);
+  font-size: 1.3rem;
+}
+.cta__input,
+.cta__button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1.2rem;
+}
+.cta__input {
+  margin-bottom: 1.5rem;
+  border: 2px solid #222;
+  border-radius: 5px;
+  outline: 0;
+}
+.cta__button {
+  background-color: var(--accent-color-1);
+  color: #fff;
+  border: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-bottom: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container {
+  background-color: #f9f8fe;
+  padding: 2rem;
+}
+
+.illustration__2 {
+  margin-bottom: 10rem;
+}
+.main__header {
+  font-family: var(--raleway-font);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color-1);
+  padding: 0 0.25rem;
+}
+.main__description {
+  font-family: var(--raleway-font);
+  color: var(--primary-color-2);
+  font-weight: var(--fw-400);
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+.mb-2-5 {
+  margin-bottom: 2.5rem;
+}
+.center {
+  text-align: center;
+  margin-bottom: 4rem;
+  transition: all 0.22s ease-in-out;
+}
+.center a {
+  text-decoration: none;
+  color: var(--accent-color-2);
+  font-size: 1.3rem;
+  font-family: var(--open-sans-font);
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--accent-color-2);
+  text-align: center;
+  transition: all 0.22s ease-in-out;
+}
+
+.center a:hover {
+  opacity: 0.75;
+}
+
+.center:hover {
+  transform: translateY(-2px);
+}
+
+/* TESTITOMIANLS SECTION */
+
+.testimonial {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 0 3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 8rem;
+}
+.card__img {
+  margin-bottom: 1rem;
+  font-family: var(--open-sans-font);
+}
+
+.card__description {
+  color: var(--primary-color-2);
+  font-family: var(--open-sans-font);
+  font-size: 1.05rem;
+  margin-bottom: 1.6rem;
+}
+.testimonial__img {
+  width: 3.6rem;
+  border-radius: 50%;
+}
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.flex-group-content {
+  font-family: var(--raleway-font);
+  color: var(--primary-color-1);
+}
+.flex-group-heading {
+  font-weight: var(--fw-700);
+}
+.flex-group-description {
+  font-weight: var(--fw-400);
+  font-family: var(--open-sans-font);
+  font-size: 0.8rem;
+  color: var(--primary-color-2);
+}
+
+/* EARLY ACESS SECTION (BEFORE FOOTER) */
+
+.early__access {
+  background-color: var(--primary-color-2);
+  color: #fff;
+  text-align: center;
+  font-family: var(--open-sans-font);
+  padding: 2.5rem;
+}
+
+.early__access-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: var(--fw-700);
+  font-family: var(--raleway-font);
+}
+.early__access-description {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  padding: 0 3rem;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 5rem;
+}
+.early__input {
+  padding: 0.8rem 1rem;
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+}
+.early__button {
+  padding: 0.8rem 1rem;
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  background-color: var(--accent-color-1);
+  margin-bottom: 3rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-weight: var(--fw-700);
+}
+
+/* Footer Section */
+
+footer {
+  background-color: var(--primary-color-1);
+  padding: 4rem;
+  font-family: var(--open-sans-font);
+}
+.footer__logo {
+  filter: brightness(0) invert(1);
+  margin-bottom: 3rem;
+}
+.contact__flex {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+ul li {
+  display: flex;
+  flex-direction: column;
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: var(--fw-400);
+  font-size: 1.2rem;
+}
+.first__link-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.second__link-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  filter: brightness(0) invert(1);
+  padding: 0;
+}
